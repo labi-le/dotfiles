@@ -24,6 +24,7 @@ assign [class="discord"] 4
 # Develop
 assign [class="jetbrains-toolbox"] 5
 assign [class="jetbrains-phpstorm"] 5
+assign [class="jetbrains-pycharm"] 5
 
 
 
