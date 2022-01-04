@@ -58,6 +58,7 @@ set $powermenu ~/.config/waybar/scripts/power-menu.sh
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+    
 #
 # Workspaces:
 #
@@ -85,6 +86,7 @@ set $powermenu ~/.config/waybar/scripts/power-menu.sh
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+    
 #
 # Layout stuff:
 #
@@ -110,6 +112,7 @@ set $powermenu ~/.config/waybar/scripts/power-menu.sh
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+    
 #
 # Scratchpad:
 #
@@ -122,32 +125,22 @@ set $powermenu ~/.config/waybar/scripts/power-menu.sh
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
+    
 #
 # Resizing containers:
 #
-# mode "resize" {
-    # bindsym Left resize shrink width 10px
-    # bindsym Down resize grow height 10px
-    # bindsym Up resize shrink height 10px
-    # bindsym Right resize grow width 10px
+	bindsym $mod+Ctrl+Right resize shrink width 3 px or 3 ppt
+	bindsym $mod+Ctrl+Up resize grow height 3 px or 3 ppt
+	bindsym $mod+Ctrl+Down resize shrink height 3 px or 3 ppt
+	bindsym $mod+Ctrl+Left resize grow width 3 px or 3 ppt
 
-     # Return to default mode
-    # bindsym Return mode "default"
-    # bindsym Escape mode "default"
-# }
-# bindsym $mod+r mode "resize"
-
-bindsym $mod+Ctrl+Right resize shrink width 3 px or 3 ppt
-bindsym $mod+Ctrl+Up resize grow height 3 px or 3 ppt
-bindsym $mod+Ctrl+Down resize shrink height 3 px or 3 ppt
-bindsym $mod+Ctrl+Left resize grow width 3 px or 3 ppt
-
-
+# 
 # Resize floating windows with mouse scroll:
-bindsym --whole-window --border $mod+button4 resize shrink height 5 px or 5 ppt
-bindsym --whole-window --border $mod+button5 resize grow height 5 px or 5 ppt
-bindsym --whole-window --border $mod+shift+button4 resize shrink width 5 px or 5 ppt
-bindsym --whole-window --border $mod+shift+button5 resize grow width 5 px or 5 ppt
+# 
+	bindsym --whole-window --border $mod+button4 resize shrink height 5 px or 5 ppt
+	bindsym --whole-window --border $mod+button5 resize grow height 5 px or 5 ppt
+	bindsym --whole-window --border $mod+shift+button4 resize shrink width 5 px or 5 ppt
+	bindsym --whole-window --border $mod+shift+button5 resize grow width 5 px or 5 ppt
 
 #
 # Volume
@@ -155,6 +148,7 @@ bindsym --whole-window --border $mod+shift+button5 resize grow width 5 px or 5 p
     bindsym --locked XF86AudioRaiseVolume exec pamixer -ui 2
     bindsym --locked XF86AudioLowerVolume exec pamixer -ud 2
     bindsym --locked XF86AudioMute exec pamixer -t
+    
 #
 # Player
 #
@@ -162,25 +156,26 @@ bindsym --whole-window --border $mod+shift+button5 resize grow width 5 px or 5 p
     bindsym XF86AudioPause exec playerctl pause
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
+    
 #
 # Backlight
 #
     bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
     bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
+
 #
 # App shortcuts
 #
     bindsym $mod+n exec thunar
     bindsym $mod+o exec google-chrome-stable --restore-last-session
+
 #
 # Screenshots
 #
     bindsym print exec grim -g "$(slurp)" - | wl-copy
-#
-# Keybindings List
-#
-   bindsym $mod+t exec xed ~/.config/sway/cheatsheet    
 
+#
 # Border
-smart_borders on
-default_border pixel
+#
+	smart_borders on
+	default_border pixel
