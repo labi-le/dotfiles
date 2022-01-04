@@ -1,35 +1,49 @@
 # Assign workspaces
 
-assign [app_id="xfce4-terminal"] 1
+# 
+# Terminal workspace
+# 
+assign [app_id="xfce4-terminal"] $terminal_workspace
 for_window [app_id="xfce4-terminal"] focus
 
 
-assign [app_id="Google-chrome"] 2
-for_window [app_id="Google-chrome"] focus
-
-assign [class="Google-chrome"] 2
+# 
+# Browser workspace
+# 
+assign [class="Google-chrome"] $browser_workspace
 for_window [class="Google-chrome"] focus
+# Inhibit idle
+for_window [class="Google-chrome"] inhibit_idle fullscreen
 
-# File working
-assign [app_id=thunar] 3
+
+# 
+# Browser workspace
+# 
+assign [app_id=thunar] $file_workspace
 for_window [app_id=thunar] focus
 
-assign [class="File-roller"] 3
-
-
-# Fun
-assign [app_id="telegramdesktop"] 4
-assign [class="discord"] 4
-
-# Develop
-assign [class="jetbrains-toolbox"] 5
-assign [class="jetbrains-phpstorm"] 5
-assign [class="jetbrains-pycharm"] 5
-assign [class="jetbrains-studio"] 5
+assign [app_id="file-roller"] $file_workspace
+for_window [app_id="file-roller"] focus
 
 
 
+# 
+# Social workspace
+# 
+assign [app_id="telegramdesktop"] $social_workspace
+assign [class="discord"] $social_workspace
 
+# 
+# Social workspace
+#
+assign [class="jetbrains-toolbox"] $develop_workspace
+assign [class="jetbrains-phpstorm"] $develop_workspace
+assign [class="jetbrains-pycharm"] $develop_workspace
+assign [class="jetbrains-studio"] $develop_workspace
+
+
+
+# Other
 for_window [app_id="xed"] focus
 
 
@@ -62,6 +76,3 @@ for_window [title="nmtui"] floating enable,  resize set width 50 ppt height 70 p
 for_window [title="htop"] floating enable, resize set width 50 ppt height 70 ppt
 for_window [app_id="xsensors"] floating enable
 for_window [title="Save File"] floating enable
-
-# Inhibit idle
-for_window [class="Google-chrome"] inhibit_idle fullscreen

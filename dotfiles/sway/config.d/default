@@ -1,17 +1,3 @@
-# Logo key. Use Mod1 for Alt.
-set $mod Mod4
-
-# Your preferred terminal emulators
-set $term-float xfce4-terminal
-
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-set $menu wofi -c ~/.config/wofi/config -I
-
-set $powermenu ~/.config/waybar/scripts/power-menu.sh
-
-
 ## Lock Screen
  bindsym $mod+f1 exec ~/.config/sway/scripts/lockman.sh
 
@@ -62,17 +48,26 @@ set $powermenu ~/.config/waybar/scripts/power-menu.sh
 #
 # Workspaces:
 #
+
+   # etc
+   # set $_workspace 6
+   # set $_ workspace 7
+   # set $_workspace 8
+   # set $_workspace 9
+   # set $_workspace 10
+
+
     # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
+    bindsym $mod+1 workspace $terminal_workspace
+    bindsym $mod+2 workspace $develop_workspace
+    bindsym $mod+3 workspace $browser_workspace
+    bindsym $mod+4 workspace $social_workspace
+    bindsym $mod+5 workspace $file_workspace
+    bindsym $mod+6 workspace 6
+    bindsym $mod+7 workspace 7
+    bindsym $mod+8 workspace 8
+    bindsym $mod+9 workspace 9
+    bindsym $mod+0 workspace 10
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
