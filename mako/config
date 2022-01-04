@@ -11,7 +11,7 @@ icon-path=/usr/share/icons/Arc-X-D
 max-icon-size=70
 layer=overlay
 
-border-size=5
+border-size=2
 border-radius=0
 border-color=#5294e2
 
