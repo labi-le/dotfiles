@@ -37,6 +37,7 @@ assign [class="discord"] $social_workspace
 # Social workspace
 #
 assign [class="jetbrains-toolbox"] $develop_workspace
+assign [class="jetbrains-goland"] $develop_workspace
 assign [class="jetbrains-phpstorm"] $develop_workspace
 assign [class="jetbrains-pycharm"] $develop_workspace
 assign [class="jetbrains-studio"] $develop_workspace
