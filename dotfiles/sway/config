@@ -13,6 +13,7 @@ set $develop_workspace 2
 set $browser_workspace 3
 set $social_workspace 4
 set $file_workspace 5
+set $game_workspace 6
 
 # Your preferred terminal emulators
 set $term xfce4-terminal

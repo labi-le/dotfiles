@@ -32,9 +32,10 @@ for_window [app_id="file-roller"] focus
 # 
 assign [app_id="telegramdesktop"] $social_workspace
 assign [class="discord"] $social_workspace
+assign [class="VK"] $social_workspace
 
 # 
-# Social workspace
+# Dev workspace
 #
 assign [class="jetbrains-toolbox"] $develop_workspace
 assign [class="jetbrains-goland"] $develop_workspace
@@ -42,6 +43,10 @@ assign [class="jetbrains-phpstorm"] $develop_workspace
 assign [class="jetbrains-pycharm"] $develop_workspace
 assign [class="jetbrains-studio"] $develop_workspace
 
+# 
+# Game
+# 
+assign [class="Steam"] $game_workspace
 
 
 # Other

@@ -49,21 +49,13 @@
 # Workspaces:
 #
 
-   # etc
-   # set $_workspace 6
-   # set $_ workspace 7
-   # set $_workspace 8
-   # set $_workspace 9
-   # set $_workspace 10
-
-
     # Switch to workspace
     bindsym $mod+1 workspace $terminal_workspace
     bindsym $mod+2 workspace $develop_workspace
     bindsym $mod+3 workspace $browser_workspace
     bindsym $mod+4 workspace $social_workspace
     bindsym $mod+5 workspace $file_workspace
-    bindsym $mod+6 workspace 6
+    bindsym $mod+6 workspace $game_workspace
     bindsym $mod+7 workspace 7
     bindsym $mod+8 workspace 8
     bindsym $mod+9 workspace 9
