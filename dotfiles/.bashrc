@@ -44,6 +44,7 @@ alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles exce
 
 # Sway alias
 alias sway-tree='swaymsg -t get_tree'
+alias edit-config='micro ~/.config/sway/config.d/*'
 
 
 [[ "$(whoami)" = "root" ]] && return

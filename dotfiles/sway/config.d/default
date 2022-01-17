@@ -5,20 +5,23 @@
 #
 # Basics:
 #
-    # Start a floating terminal
+    # Start  terminal
     bindsym $mod+Return exec $term
          
     # Open the power menu
     bindsym $mod+Shift+e exec $powermenu
 
     # Kill focused window
-    bindsym $mod+q kill
+    # Button Q
+    bindcode $mod+24 kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    # Button D
+    bindcode $mod+40 exec $menu
     
     # Activities
-    bindsym $mod+p exec ~/.config/wofi/windows.py
+    # Button p
+    bindcode $mod+33 exec ~/.config/wofi/windows.py
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -28,7 +31,8 @@
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    # Button C
+    bindcode $mod+Shift+54 reload
 
 #
 # Moving around:
@@ -80,16 +84,25 @@
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+
+    # Button B
+    bindcode $mod+56 splith
+    # Button V
+    bindcode $mod+55 splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+
+    # Button S
+    bindcode $mod+39 layout stacking
+    # Button W
+    bindcode $mod+25 layout tabbed
+    # Button E
+    bindcode $mod+26 layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+
+    # Button F
+    bindcode $mod+41 fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
@@ -98,7 +111,9 @@
     bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+
+    # Button A
+    bindcode $mod+38 focus parent
     
 #
 # Scratchpad:
@@ -160,9 +175,3 @@
 # Screenshots
 #
     bindsym print exec grim -g "$(slurp)" - | wl-copy
-
-#
-# Border
-#
-	smart_borders on
-	default_border pixel
