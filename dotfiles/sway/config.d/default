@@ -15,6 +15,9 @@
     # Button Q
     bindcode $mod+24 kill
 
+    # Kill window in border click middle mouse button
+    bindcode 274 kill --border
+
     # Start your launcher
     # Button D
     bindcode $mod+40 exec $menu
