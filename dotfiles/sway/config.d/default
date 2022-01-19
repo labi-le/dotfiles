@@ -20,7 +20,7 @@
     bindcode $mod+40 exec $menu
     
     # Activities
-    # Button p
+    # Button P
     bindcode $mod+33 exec ~/.config/wofi/windows.py
 
     # Drag floating windows by holding down $mod and left mouse button.
@@ -168,8 +168,8 @@
 #
 # App shortcuts
 #
-    bindsym $mod+n exec thunar
-    bindsym $mod+o exec google-chrome-stable --restore-last-session
+    bindsym $mod+n exec $file_manager
+    bindsym $mod+o exec $browser
 
 #
 # Screenshots

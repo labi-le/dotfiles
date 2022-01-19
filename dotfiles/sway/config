@@ -16,8 +16,10 @@ set $social_workspace 4
 set $file_workspace 5
 set $game_workspace 6
 
-# Your preferred terminal emulators
+set $browser google-chrome-stable --restore-last-session
 set $term xfce4-terminal
+set $file_manager thunar
+
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
