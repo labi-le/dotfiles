@@ -1,4 +1,5 @@
 {
     "autosu": true,
-    "colorscheme": "nord-16"
+    "colorscheme": "nord-16",
+    "mkparents": true
 }

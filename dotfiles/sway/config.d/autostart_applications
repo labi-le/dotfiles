@@ -18,4 +18,4 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 # Sway Fader
 # exec python3 ~/.config/sway/scripts/swayfader.py      
 
-exec google-chrome-stable
+exec $browser

@@ -177,4 +177,5 @@
 #
 # Screenshots
 #
-    bindsym print exec grim -g "$(slurp)" - | wl-copy
+    bindsym print exec /usr/share/sway/scripts/grimshot copy area
+    bindsym $mod+print exec  /usr/share/sway/scripts/grimshot copy window

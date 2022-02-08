@@ -42,6 +42,7 @@ assign [class="jetbrains-goland"] $develop_workspace
 assign [class="jetbrains-phpstorm"] $develop_workspace
 assign [class="jetbrains-pycharm"] $develop_workspace
 assign [class="jetbrains-studio"] $develop_workspace
+assign [class="jetbrains-idea"] $develop_workspace
 
 # 
 # Game
@@ -65,6 +66,8 @@ for_window [class="qt5ct" instance="qt5ct"] floating enable, resize set width 60
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [app_id="pamac-manager"] floating enable, resize set width 80 ppt height 70 ppt
 for_window [class="Lxappearance"] floating enable, resize set width 60 ppt height 50 ppt
+
+for_window [app_id="mpv"] floating enable, resize set width 40 ppt height 30 ppt
 
 # set floating for window roles
 for_window [window_role="pop-up"] floating enable
