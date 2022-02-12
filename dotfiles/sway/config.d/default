@@ -8,8 +8,9 @@
     # Start  terminal
     bindsym $mod+Return exec $term
          
-    # Open the power menu
-    bindsym $mod+Shift+e exec $powermenu
+    # Open the power menu 
+    # Button E
+    bindcode $mod+Shift+26 exec $powermenu
 
     # Kill focused window
     # Button Q
