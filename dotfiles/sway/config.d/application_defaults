@@ -10,18 +10,14 @@ for_window [app_id="xfce4-terminal"] focus
 # 
 # Browser workspace
 # 
-assign [class="Google-chrome"] $browser_workspace
-for_window [class="Google-chrome"] focus; inhibit_idle fullscreen
+for_window [class="Google-chrome"] move to workspace $browser_workspace;  focus; inhibit_idle fullscreen
 
 
 # 
 # Browser workspace
 # 
-assign [app_id=thunar] $file_workspace
-for_window [app_id=thunar] floating enable; focus
-
-assign [app_id="file-roller"] $file_workspace
-for_window [app_id="file-roller"] floating enable; focus
+for_window [app_id=thunar] move to workspace $file_workspace; floating enable; focus
+for_window [app_id="file-roller"] move to workspace $file_workspace; floating enable; focus
 
 
 
@@ -29,8 +25,8 @@ for_window [app_id="file-roller"] floating enable; focus
 # Social workspace
 # 
 
-for_window [app_id="telegramdesktop"] move to workspace $social_workspace; focus
-for_window [class="discord"] move to workspace $social_workspace; focus
+for_window [app_id="telegramdesktop"] move to workspace $social_workspace
+for_window [class="discord"] move to workspace $social_workspace
 for_window [class="Spotify"] move to workspace $social_workspace; floating enable
 
 # 
@@ -43,7 +39,7 @@ assign [class="jetbrains-pycharm"] $develop_workspace
 assign [class="jetbrains-studio"] $develop_workspace
 assign [class="jetbrains-idea"] $develop_workspace
 
-# 
+#
 # Game
 # 
 assign [class="Steam"] $game_workspace
