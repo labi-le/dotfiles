@@ -18,4 +18,9 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 # Sway Fader
 # exec python3 ~/.config/sway/scripts/swayfader.py      
 
-exec $browser
+exec $browser --no-startup-id
+exec $term --no-startup-id
+
+exec telegram-desktop --no-startup-id 
+exec discord --no-startup-id 
+exec spotify --no-startup-id

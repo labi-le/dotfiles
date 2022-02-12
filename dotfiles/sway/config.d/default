@@ -110,9 +110,6 @@
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
 
-    # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
-
     # Move focus to the parent container
 
     # Button A
@@ -171,8 +168,10 @@
 #
 # App shortcuts
 #
-    bindsym $mod+n exec $file_manager
-    bindsym $mod+o exec $browser
+	# Button N
+    bindcode $mod+57 exec $file_manager
+	# Button O
+    bindcode $mod+32 exec $browser
 
 #
 # Screenshots
