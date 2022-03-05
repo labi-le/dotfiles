@@ -3,6 +3,9 @@
 #
 
 # If not running interactively, don't do anything
+
+alias ssh="kitty +kitten ssh"
+
 [[ $- != *i* ]] && return
 
 
@@ -38,7 +41,7 @@ alias d='docker'
 alias dc='docker-compose'
 alias c='composer'
 
-alias ls='ls --color=auto'
+alias ls='ls -lah --color=auto'
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
 alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 
@@ -98,3 +101,6 @@ _open_files_for_editing() {
 # alias pacdiff=eos-pacdiff
 ################################################################################
 
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION

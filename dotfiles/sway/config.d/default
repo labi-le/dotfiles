@@ -6,26 +6,26 @@
 # Basics:
 #
     # Start  terminal
-    bindsym $mod+Return exec $term
+    bindsym --to-code $mod+Return exec $term
          
     # Open the power menu 
     # Button E
-    bindcode $mod+Shift+26 exec $powermenu
+    bindsym --to-code $mod+Shift+e exec $powermenu
 
     # Kill focused window
     # Button Q
-    bindcode $mod+24 kill
+    bindsym --to-code $mod+q kill
 
     # Kill window in border click middle mouse button
     bindcode 274 kill --border
 
     # Start your launcher
     # Button D
-    bindcode $mod+40 exec $menu
+    bindsym --to-code $mod+d exec $menu
     
     # Activities
     # Button P
-    bindcode $mod+33 exec ~/.config/wofi/windows.py
+    bindsym --to-code $mod+p exec ~/.config/wofi/windows.py
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -36,51 +36,54 @@
 
     # Reload the configuration file
     # Button C
-    bindcode $mod+Shift+54 reload
+    bindsym --to-code $mod+Shift+c reload
 
 #
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
+    bindsym --to-code $mod+Left focus left
+    bindsym --to-code $mod+Down focus down
+    bindsym --to-code $mod+Up focus up
+    bindsym --to-code $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move right
+    bindsym --to-code $mod+Shift+Left move left
+    bindsym --to-code $mod+Shift+Down move down
+    bindsym --to-code $mod+Shift+Up move up
+    bindsym --to-code $mod+Shift+Right move right
     
 #
 # Workspaces:
 #
 
     # Switch to workspace
-    bindsym $mod+1 workspace $terminal_workspace
-    bindsym $mod+2 workspace $develop_workspace
-    bindsym $mod+3 workspace $browser_workspace
-    bindsym $mod+4 workspace $social_workspace
-    bindsym $mod+5 workspace $file_workspace
-    bindsym $mod+6 workspace $game_workspace
-    bindsym $mod+7 workspace 7
-    bindsym $mod+8 workspace 8
-    bindsym $mod+9 workspace 9
-    bindsym $mod+0 workspace 10
+    bindsym --to-code $mod+1 workspace $terminal_workspace
+    bindsym --to-code $mod+2 workspace $develop_workspace
+    bindsym --to-code $mod+3 workspace $browser_workspace
+    bindsym --to-code $mod+4 workspace $social_workspace
+    bindsym --to-code $mod+5 workspace $file_workspace
+    bindsym --to-code $mod+6 workspace $game_workspace
+    bindsym --to-code $mod+7 workspace 7
+    bindsym --to-code $mod+8 workspace 8
+    bindsym --to-code $mod+9 workspace 9
+    bindsym --to-code $mod+0 workspace 10
     # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
+    bindsym --to-code $mod+Shift+1 move container to workspace $terminal_workspace
+    bindsym --to-code $mod+Shift+2 move container to workspace $develop_workspace
+    bindsym --to-code $mod+Shift+3 move container to workspace $browser_workspace
+    bindsym --to-code $mod+Shift+4 move container to workspace $social_workspace
+    bindsym --to-code $mod+Shift+5 move container to workspace $file_manager
+    bindsym --to-code $mod+Shift+6 move container to workspace $game_workspace
+    bindsym --to-code $mod+Shift+7 move container to workspace number 7
+    bindsym --to-code $mod+Shift+8 move container to workspace number 8
+    bindsym --to-code $mod+Shift+9 move container to workspace number 9
+    bindsym --to-code $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
+    bindsym --to-code $mod+alt+Left workspace prev
+    bindsym --to-code $mod+alt+Right workspace next
     
 #
 # Layout stuff:
@@ -90,31 +93,31 @@
     # respectively.
 
     # Button B
-    bindcode $mod+56 splith
+    bindsym --to-code $mod+b splith
     # Button V
-    bindcode $mod+55 splitv
+    bindsym --to-code $mod+v splitv
 
     # Switch the current container between different layout styles
 
     # Button S
-    bindcode $mod+39 layout stacking
+    bindsym --to-code $mod+s layout stacking
     # Button W
-    bindcode $mod+25 layout tabbed
+    bindsym --to-code $mod+w layout tabbed
     # Button E
-    bindcode $mod+26 layout toggle split
+    bindsym --to-code $mod+e layout toggle split
 
     # Make the current focus fullscreen
 
     # Button F
-    bindcode $mod+41 fullscreen
+    bindsym --to-code $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym --to-code $mod+Shift+space floating toggle
 
     # Move focus to the parent container
 
     # Button A
-    bindcode $mod+38 focus parent
+    bindsym --to-code $mod+a focus parent
     
 #
 # Scratchpad:
@@ -132,10 +135,11 @@
 #
 # Resizing containers:
 #
-	bindsym $mod+Ctrl+Right resize shrink width 3 px or 3 ppt
-	bindsym $mod+Ctrl+Up resize grow height 3 px or 3 ppt
-	bindsym $mod+Ctrl+Down resize shrink height 3 px or 3 ppt
-	bindsym $mod+Ctrl+Left resize grow width 3 px or 3 ppt
+set $resizeLevel 20
+	bindsym $mod+Ctrl+Right resize shrink width $resizeLevel px or $resizeLevel ppt
+	bindsym $mod+Ctrl+Up resize grow height $resizeLevel px or $resizeLevel ppt
+	bindsym $mod+Ctrl+Down resize shrink height $resizeLevel px or $resizeLevel ppt
+	bindsym $mod+Ctrl+Left resize grow width $resizeLevel px or $resizeLevel ppt
 
 # 
 # Resize floating windows with mouse scroll:
@@ -170,12 +174,19 @@
 # App shortcuts
 #
 	# Button N
-    bindcode $mod+57 exec $file_manager
+    bindsym --to-code $mod+n exec $file_manager
 	# Button O
-    bindcode $mod+32 exec $browser
+    bindsym --to-code $mod+o exec $browser
 
 #
 # Screenshots
 #
-    bindsym print exec /usr/share/sway/scripts/grimshot copy area
-    bindsym $mod+print exec  /usr/share/sway/scripts/grimshot copy window
+    bindsym --to-code print exec /usr/share/sway/scripts/grimshot copy area
+    bindsym --to-code $mod+print exec  /usr/share/sway/scripts/grimshot copy window
+    bindsym --to-code $mod+Shift+print exec  /usr/share/sway/scripts/grimshot copy screen
+
+
+# 
+# Hide bar
+# 
+    bindsym --to-code $mod+z exec killall -SIGUSR1 waybar

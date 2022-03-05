@@ -16,9 +16,10 @@ set $social_workspace 4
 set $file_workspace 5
 set $game_workspace 6
 
-set $browser google-chrome-stable --restore-last-session
-set $term xfce4-terminal
-set $file_manager thunar
+# set $browser google-chrome-stable --restore-last-session
+set $browser waterfox-g4 --restore-last-session
+set $term kitty
+set $file_manager kitty -e ranger
 
 
 # Your preferred application launcher
