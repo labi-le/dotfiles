@@ -1,0 +1,11 @@
+export MOZ_ENABLE_WAYLAND=1
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_TYPE=wayland
+export WLR_NO_HARDWARE_CURSORS=1
+#export WLR_NO_HARDWARE_CURSORS=0
+export WLR_RENDERER_ALLOW_SOFTWARE=1
+export EDITOR=micro
+export VISUAL=micro
+# export BROWSER=google-chrome-stable
+export BROWSER=waterfox-g4
+export JAVA_AWT_WM_NONREPARENTING=1

@@ -1,0 +1,20 @@
+{
+  "dot-files-config-dir": "~/.config/",
+  "for-which-utilities-configs-need-to-take": [
+    "sway",
+    "mako",
+    "waybar",
+    "wofi",
+    "micro",
+    "ranger"
+  ],
+
+  "user-directory": "~/",
+  "from-user-directory": [
+    ".bashrc",
+    ".profile"
+  ],
+  "where-to-save-backup-configs": "./dotfiles-backup/",
+  "overwrite-files": true,
+  "archive-backup-files": true
+}
