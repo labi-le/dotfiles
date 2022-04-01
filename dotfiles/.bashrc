@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 
 alias ssh="kitty +kitten ssh"
+alias spotify="flatpak run com.spotify.Client"
 
 [[ $- != *i* ]] && return
 

@@ -57,7 +57,7 @@
       "warning": 70,
       "critical": 90
     },
-    "on-click": "xfce4-terminal -e 'htop'"
+    "on-click": "kitty -e 'htop'"
   },
   "custom/keyboard-layout": {
     "exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
@@ -69,7 +69,7 @@
   "memory": {
     "interval": 5,
     "format": "ram {}%",
-    "on-click": "xfce4-terminal -e 'htop'",
+    "on-click": "kitty -e 'htop'",
     "states": {
       "warning": 70,
       "critical": 90
