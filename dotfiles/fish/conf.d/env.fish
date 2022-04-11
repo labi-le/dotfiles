@@ -6,4 +6,5 @@ export WLR_RENDERER_ALLOW_SOFTWARE=1
 export EDITOR=micro
 export VISUAL=micro
 export BROWSER=waterfox-g4
-export JAVA_AWT_WM_NONREPARENTING=1
+export _JAVA_AWT_WM_NONREPARENTING=1
+export SHELL=/bin/fish
