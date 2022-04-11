@@ -1,7 +1,7 @@
 CONFIG_DIR = $(HOME)/.config/
 DOTFILES_DIR = ./dotfiles/
-CONFIGS = {sway,mako,waybar,wofi,micro,ranger}
-CONFIGS_IN_HOME = {.bashrc,.profile}
+CONFIGS = {sway,mako,waybar,wofi,micro,ranger,fish}
+CONFIGS_IN_HOME = .profile
 
 build:
 	rm -rf $(DOTFILES_DIR) && mkdir -p $(DOTFILES_DIR)
