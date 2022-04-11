@@ -21,6 +21,6 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 exec $browser --no-startup-id
 exec $term --no-startup-id
 
-exec telegram-desktop --no-startup-id 
+exec kotatogram-desktop --no-startup-id 
 exec discord --no-startup-id 
-exec spotify --no-startup-id
+exec simplenote --no-startup-id

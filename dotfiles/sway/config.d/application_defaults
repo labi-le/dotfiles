@@ -24,7 +24,8 @@ for_window [app_id="file-roller"] move to workspace $file_workspace; floating en
 # Social workspace
 # 
 
-for_window [app_id="telegramdesktop"] move to workspace $social_workspace; layout tabbed;
+for_window [app_id="(.*)-Kotatogram_Desktop"] move to workspace $social_workspace; layout tabbed;
+for_window [class="Simplenote"] move to workspace $social_workspace; layout tabbed;
 for_window [class="discord"] move to workspace $social_workspace; layout tabbed;
 for_window [class="Spotify"] move to workspace $social_workspace; layout tabbed;
 

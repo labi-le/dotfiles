@@ -177,10 +177,9 @@ set $resizeLevel 20
 #
 # App shortcuts
 #
-	# Button N
-    bindsym --to-code $mod+n exec $file_manager
-	# Button O
+    bindsym --to-code $mod+r exec $file_manager
     bindsym --to-code $mod+o exec $browser
+    bindsym --to-code $mod+n exec simplenote
 
 #
 # Screenshots
