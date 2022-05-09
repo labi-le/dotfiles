@@ -24,3 +24,7 @@ exec $term --no-startup-id
 exec kotatogram-desktop --no-startup-id 
 exec discord --no-startup-id 
 exec simplenote --no-startup-id
+
+exec thunderbird --no-startup-id
+exec keepassxc & --no-startup-id
+exec blueman-applet & --no-startup-id

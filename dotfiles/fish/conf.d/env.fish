@@ -5,6 +5,6 @@ export WLR_NO_HARDWARE_CURSORS=1
 export WLR_RENDERER_ALLOW_SOFTWARE=1
 export EDITOR=micro
 export VISUAL=micro
-export BROWSER=waterfox-g4
+export BROWSER=google-chrome-stable
 export _JAVA_AWT_WM_NONREPARENTING=1
 export SHELL=/bin/fish

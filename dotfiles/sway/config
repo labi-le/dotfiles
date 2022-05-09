@@ -7,7 +7,8 @@
 
 # Logo key. Use Mod1 for Alt.
 # Windows key
-set $mod Mod4
+set $mod Mod1
+set $comand Mod4
 
 set $terminal_workspace 1
 set $develop_workspace 2
@@ -15,9 +16,12 @@ set $browser_workspace 3
 set $social_workspace 4
 set $file_workspace 5
 set $game_workspace 6
+set $work_workspace 7
+set $private_workspace 8
 
-# set $browser google-chrome-stable --restore-last-session
-set $browser waterfox-g4 --restore-last-session
+set $browser google-chrome-stable --restore-last-session
+# set $browser firefox --restore-last-session
+# set $browser waterfox-g4 --restore-last-session
 set $term kitty
 set $file_manager $term -e fish --command ranger
 

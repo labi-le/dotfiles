@@ -103,11 +103,14 @@
     "all-outputs": true,
     "format": "  {icon}  ",
     "format-icons": {
-      "1": "terminal",
-      "2": "ide",
+      "1": "cmd",
+      "2": "dev",
       "3": "browser",
       "4": "social",
-      "5": "file"
+      "5": "file",
+      "6": "game",
+      "7": "work",
+      "8": "private"
     }
   },
   "pulseaudio": {
