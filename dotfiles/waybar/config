@@ -1,8 +1,6 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 16,
-  "width": 10,
   "modules-left": [
     "sway/workspaces",
     "sway/mode"
@@ -45,7 +43,7 @@
     "tooltip-format": "{:%e %B %Y}"
   },
   "custom/weather": {
-    "return-type" : "json",
+    "return-type": "json",
     "interval": 18000,
     "exec": "~/.config/waybar/scripts/weather.sh Saint-Petersburg",
     "format": "weather {}"
