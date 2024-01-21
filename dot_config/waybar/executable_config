@@ -1,0 +1,126 @@
+{
+  "output": "eDP-1",
+  "_output": "HDMI-A-2",
+  "height": 12,
+  "position": "top",
+  "modules-left": [
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "custom/spotify"
+  ],
+  "modules-right": [
+    "network",
+    "custom/vpn",
+    "memory",
+    "cpu",
+    "pulseaudio",
+    "backlight",
+    "sway/language",
+    "battery",
+    "clock"
+  ],
+
+  "cpu": {
+    "format": "cpu {usage}%"
+  },
+
+  "memory": {
+    "format": "mem {}%"
+  },
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8"
+    }
+  },
+  
+  "custom/spotify": {
+    "format": " {}",
+    "interval": 1,
+    "exec-if": "pgrep spotify",
+    "on-click": "playerctl -p spotify play-pause",
+    "on-scroll-up": "playerctl -p spotify previous",
+    "on-scroll-down": "playerctl -p spotify next",
+    "on-double-click": "playerctl -p spotify next",
+    "tooltip": true,
+    "escape": true,
+    "max-length": 50,
+    "exec": "playerctl -p spotify metadata --format '{{ artist }} - {{ album }} - {{ title }}'"
+  },
+  "clock": {
+    "format": " {:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
+    "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
+    "format-critical": "<span size='13000' foreground='#E38C8F'>{icon}</span> {capacity}%",
+    "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {time}",
+    "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "tooltip-format": "{time}"
+  },
+  "network": {
+    "format-wifi": "<span size='13000' foreground='#F2CECF'> </span>{signaldBm}",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+    "on-click-right": "alacritty -e nmtui"
+  },
+  "custom/vpn": {
+    "format": "{icon}",
+    "return-type": "json",
+    "exec": "waybar-nmvpn",
+    "format-icons": {
+      "connected": "",
+      "disconnected": "",
+      "none": "",
+      "error": "⚠"
+    }
+  },
+  "pulseaudio": {
+    "on-click-right": "pavucontrol",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "format": "<span size='13000' foreground='#EBDDAA'>{icon}</span> {volume}%",
+    "format-bluetooth": "<span size='13000' foreground='#EBDDAA'>{icon} </span> {volume}%",
+    "format-muted": "<span size='14000' foreground='#EBDDAA'></span> Muted",
+    "format-icons": {
+      "default": [
+        "",
+        ""
+      ]
+    }
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "on-scroll-down": "brightnessctl -c backlight set 1%-",
+    "on-scroll-up": "brightnessctl -c backlight set +1%",
+    "format-icons": [
+      "",
+      ""
+    ]
+  }
+}

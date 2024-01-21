@@ -1,0 +1,45 @@
+# Initial Setup 
+# exec ~/set_once.sh
+
+# Config for sway
+#
+# Read `man 5 sway` for a complete reference.
+
+# Logo key. Use Mod1 for Alt.
+# Windows key
+set $mod Mod4
+set $comand Mod1
+
+set $hdmi 'HDMI-A-2' 
+set $edp 'eDP-1'
+set $dpleft 'DP-3'
+
+set $terminal_workspace 1
+set $develop_workspace 2
+set $browser_workspace 3
+set $social_workspace 4
+set $file_workspace 5
+set $game_workspace 6
+set $work_workspace 7
+set $private_workspace 8
+
+set $browser google-chrome-stable --restore-last-session
+# set $browser firefox --restore-last-session
+# set $browser waterfox-g4 --restore-last-session
+#set $browser vivaldi-stable --restore-last-session
+set $term alacritty
+set $file_manager $term -e fish --command ranger
+
+
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu wofi -c ~/.config/wofi/config -I
+
+set $powermenu ~/.config/waybar/scripts/power-menu.sh
+
+# user config directory
+include $HOME/.config/sway/config.d/*
+
+# only enable this if every app you use is compatible with wayland
+xwayland enable 

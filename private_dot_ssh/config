@@ -1,0 +1,9 @@
+Host vpn
+        HostName 45.144.233.29
+        User root
+
+Host pet
+        HostName 192.168.0.3
+
+Host nixos
+	HostName 192.168.0.5
