@@ -1,3 +1,17 @@
+backup-dots:
+	chezmoi add ~/.config/alacritty/
+	chezmoi add ~/.config/btop/
+	chezmoi add ~/.config/fish/
+	chezmoi add ~/.config/mako/
+	chezmoi add ~/.config/nvim/
+	chezmoi add ~/.config/sway/
+	chezmoi add ~/.config/waybar/
+	chezmoi add ~/.config/wofi/
+	chezmoi apply && chezmoi cd && git add . && git commit -m "Update dotfiles" && git push
+
+restore-dots:
+	chezmoi update -v
+
 backup-packages:
 	sudo pacman -Qqen > pkglist-repo.txt
 	sudo pacman -Qqem > pkglist-aur.txt
@@ -25,3 +39,4 @@ reproduce:
 	make add-chaotic-aur
 	make restore-packages
 	make restore-aur-packages
+	make restore-dots
