@@ -10,10 +10,6 @@
 set $mod Mod4
 set $comand Mod1
 
-set $hdmi 'HDMI-A-2' 
-set $edp 'eDP-1'
-set $dpext 'DP-4'
-
 set $terminal_workspace 1
 set $develop_workspace 2
 set $browser_workspace 3
